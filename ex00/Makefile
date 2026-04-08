@@ -6,11 +6,11 @@
 #    By: mhidani <mhidani@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/08 01:48:17 by mhidani           #+#    #+#              #
-#    Updated: 2026/04/08 01:48:30 by mhidani          ###   ########.fr        #
+#    Updated: 2026/04/08 19:40:56 by mhidani          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= 
+NAME		= template
 SINCE		= 2026.04.xx
 AUTHOR		= mhidani
 LOCAL		= 42SP
@@ -19,10 +19,11 @@ VERSION		= 1.0.0v
 TIMESTAMP	= $(shell date +%Y%m%d_%H%M%S)
 
 INC_DIR		= includes
+TPL_DIR		= templates
 SRC_DIR		= src
 OBJ_DIR		= obj
 
-SRC_FLS		= Base.cpp Utils.cpp
+SRC_FLS		= 
 MAIN		= main.cpp
 
 SRCS		= $(addprefix $(SRC_DIR)/, $(SRC_FLS))
@@ -32,8 +33,8 @@ MAIN_OBJ	= $(OBJ_DIR)/$(MAIN:.cpp=.o)
 OBJS		= $(SRC_OBJS) $(MAIN_OBJ)
 
 CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -g
-CXXINCS		= -I$(INC_DIR)/
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+CXXINCS		= -I$(INC_DIR) -I$(TPL_DIR)
 
 VALGRIND	= valgrind
 VGDLOG		= valgrind_$(TIMESTAMP).log
@@ -88,7 +89,7 @@ re: fclean all
 
 banner:
 	@echo "🛸 $(LOCAL) - [CPP-07 Exercise 00]"
-	@echo ""
+	@echo "Start With A Few Functions"
 	@echo "$(NAME) $(VERSION)"
 	@echo "$(AUTHOR) $(SINCE)"
 	@echo 
