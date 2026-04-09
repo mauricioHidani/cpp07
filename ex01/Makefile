@@ -6,12 +6,12 @@
 #    By: mhidani <mhidani@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/08 01:48:17 by mhidani           #+#    #+#              #
-#    Updated: 2026/04/08 19:56:02 by mhidani          ###   ########.fr        #
+#    Updated: 2026/04/08 21:37:40 by mhidani          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= iter
-SINCE		= 2026.04.xx
+SINCE		= 2026.04.08
 AUTHOR		= mhidani
 LOCAL		= 42SP
 VERSION		= 1.0.0v
