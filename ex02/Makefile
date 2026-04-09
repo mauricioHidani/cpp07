@@ -6,12 +6,12 @@
 #    By: mhidani <mhidani@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/08 01:48:17 by mhidani           #+#    #+#              #
-#    Updated: 2026/04/08 01:49:35 by mhidani          ###   ########.fr        #
+#    Updated: 2026/04/09 14:10:08 by mhidani          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= 
-SINCE		= 2026.04.xx
+NAME		= array
+SINCE		= 2026.04.8
 AUTHOR		= mhidani
 LOCAL		= 42SP
 VERSION		= 1.0.0v
@@ -19,10 +19,11 @@ VERSION		= 1.0.0v
 TIMESTAMP	= $(shell date +%Y%m%d_%H%M%S)
 
 INC_DIR		= includes
+TPL_DIR		= templates
 SRC_DIR		= src
 OBJ_DIR		= obj
 
-SRC_FLS		= Base.cpp Utils.cpp
+SRC_FLS		= 
 MAIN		= main.cpp
 
 SRCS		= $(addprefix $(SRC_DIR)/, $(SRC_FLS))
@@ -33,7 +34,7 @@ OBJS		= $(SRC_OBJS) $(MAIN_OBJ)
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -g
-CXXINCS		= -I$(INC_DIR)/
+CXXINCS		= -I$(INC_DIR) -I$(TPL_DIR)
 
 VALGRIND	= valgrind
 VGDLOG		= valgrind_$(TIMESTAMP).log
@@ -88,7 +89,7 @@ re: fclean all
 
 banner:
 	@echo "🛸 $(LOCAL) - [CPP-07 Exercise 02]"
-	@echo ""
+	@echo "Array"
 	@echo "$(NAME) $(VERSION)"
 	@echo "$(AUTHOR) $(SINCE)"
 	@echo 
